@@ -91,7 +91,7 @@ docker build --tag=library-service:latest .
 ### Run the service image by following command:
 
 ```
-docker run -it -p 8090:8090 library-service:latest
+docker run -d -p 8090:8090 library-service:latest
 ```
 
 http://localhost:8090/library/v1/swagger-ui/index.html

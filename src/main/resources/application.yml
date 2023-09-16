@@ -1,0 +1,24 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /library/v1
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-ui
+  datasource:
+    url: jdbc:h2:file:~/digitinary-library-db;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351

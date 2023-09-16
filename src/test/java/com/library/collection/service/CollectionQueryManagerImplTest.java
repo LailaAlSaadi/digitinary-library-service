@@ -1,8 +1,10 @@
 package com.library.collection.service;
 
-import com.library.collection.exception.CollectionNotFoundException;
-import com.library.collection.model.entity.Collection;
-import com.library.collection.repository.CollectionJpaRepository;
+import com.library.exception.CollectionNotFoundException;
+import com.library.model.entity.Collection;
+import com.library.repository.CollectionJpaRepository;
+import com.library.service.CollectionQueryManager;
+import com.library.service.CollectionQueryManagerImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -12,7 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-import static com.library.collection.model.enums.CollectionStatus.AVAILABLE;
+import static com.library.model.enums.CollectionStatus.AVAILABLE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;

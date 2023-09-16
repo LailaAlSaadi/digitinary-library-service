@@ -1,14 +1,16 @@
 package com.library.collection.service;
 
-import com.library.collection.exception.CollectionAlreadyBorrowedException;
-import com.library.collection.exception.CollectionNotBorrowedToReturn;
-import com.library.collection.exception.CollectionNotFoundException;
-import com.library.collection.exception.DuplicateCollectionException;
-import com.library.collection.model.command.AddCollectionRequest;
-import com.library.collection.model.command.UpdateCollectionRequest;
-import com.library.collection.model.entity.Collection;
-import com.library.collection.model.enums.CollectionType;
-import com.library.collection.repository.CollectionJpaRepository;
+import com.library.exception.CollectionAlreadyBorrowedException;
+import com.library.exception.CollectionNotBorrowedToReturn;
+import com.library.exception.CollectionNotFoundException;
+import com.library.exception.DuplicateCollectionException;
+import com.library.model.command.AddCollectionRequest;
+import com.library.model.command.UpdateCollectionRequest;
+import com.library.model.entity.Collection;
+import com.library.model.enums.CollectionType;
+import com.library.repository.CollectionJpaRepository;
+import com.library.service.CollectionService;
+import com.library.service.CollectionServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -17,8 +19,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 
-import static com.library.collection.model.enums.CollectionStatus.AVAILABLE;
-import static com.library.collection.model.enums.CollectionStatus.NOT_AVAILABLE;
+import static com.library.model.enums.CollectionStatus.AVAILABLE;
+import static com.library.model.enums.CollectionStatus.NOT_AVAILABLE;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;

@@ -1,6 +1,7 @@
 package com.library.collection.model.entity;
 
-import com.library.collection.model.enums.CollectionType;
+import com.library.model.entity.Collection;
+import com.library.model.enums.CollectionType;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;

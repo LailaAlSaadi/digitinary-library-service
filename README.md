@@ -96,5 +96,5 @@ docker run -d -p 8090:8090 library-service:latest
 
 http://localhost:8090/library/v1/swagger-ui/index.html
 
-You can access the api Swagger docs from http://localhost:8080/api/v2/api-docs
+You can access the api Swagger docs from http://localhost:8090/library/v1/v3/api-docs
 Just copy content to https://editor.swagger.io/

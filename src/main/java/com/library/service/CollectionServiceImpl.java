@@ -59,6 +59,7 @@ public class CollectionServiceImpl implements CollectionService {
             collection.setTitle(collectionRequest.getTitle());
         }
         if (collectionRequest.getType() != null) {
+            CollectionType.validate(collectionRequest.getType());
             collection.setType(CollectionType.valueOf(collectionRequest.getType()));
         }
         if (collectionRequest.getStatus() != null) {
